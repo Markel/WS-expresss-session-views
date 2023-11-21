@@ -6,8 +6,6 @@ import logger from 'morgan';
 import ExpressSession from 'express-session';
 
 let indexRouter = require('./routes/index');
-let secretRouter = require('./routes/secret');
-let loginRouter = require('./routes/login');
 
 let app = express();
 
