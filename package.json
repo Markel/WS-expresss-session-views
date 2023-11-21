@@ -1,8 +1,26 @@
 {
-  "name": "expresss-session-views",
-  "version": "1.0.0",
+  "name": "ws-proiektu",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tsc && node ./appjs/bin/www.js",
+    "test": "nodemon ./appts/bin/www.ts"
+  },
   "dependencies": {
+    "@types/cookie-parser": "^1.4.6",
+    "@types/debug": "^4.1.12",
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.17.10",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.9.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "express-session": "^1.17.3"
+    "express-session": "^1.17.3",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
