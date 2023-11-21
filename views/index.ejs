@@ -5,7 +5,14 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% if (views > 1) { %>
+      <p>views: <%= views %></p>
+      <p>expires in: <%= expire/1000 %> s</p>
+    <% } else { %>
+      <p>Welcome to <%= title %></p>
+    <% } %>
+    
   </body>
 </html>

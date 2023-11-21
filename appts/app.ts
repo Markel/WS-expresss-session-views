@@ -13,15 +13,15 @@ let app = express();
 
 declare module 'express-session' {
   interface SessionOptions {
-    login: boolean;
+    views: number;
   }
 }
 
 const sess: ExpressSession.SessionOptions = {
   secret: 'secret',
-  login: false,
+  views: 1,
   cookie: {
-    maxAge: 1000 * 60 * 0.5,
+    maxAge: 1000 * 60 * 2,
   },
   resave: false,
   saveUninitialized: true,
@@ -40,11 +40,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', indexRouter);
-app.use('/secret', secretRouter);
-app.use('/login', loginRouter);
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
